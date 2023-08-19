@@ -8,11 +8,13 @@
     <!-- tailwind and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awsome  -->
+    <script src="https://kit.fontawesome.com/3248b66f3c.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-sans">
     <header>
         
-            <div class="hero bg-[#F9F6E2] h-[873px]  flex flex-1 max-sm:flex-col  max-md:flex-col ">
+            <div class="hero bg-[#F9F6E2] h-[873px]  flex justify-between max-sm:flex-col  max-md:flex-col ">
                 <div class="hero-content text-center w-full">
                   <div class="max-w-md">
                     <h1 class="text-3xl font-bold">---SALE FEVER---</h1>
@@ -24,7 +26,7 @@
 
 
                 <div>
-                    <img src="./images/Summer 1.png" alt="">
+                    <img class="mr-28" src="./images/Summer 1.png" alt="">
                   </div>
 
               </div>
@@ -32,5 +34,179 @@
               
         
     </header>
+    <!-- header end -->
+    <main class="container mx-auto">
+        <section class="mb-20 ">
+            <h2 class="text-4xl font-bold mt-20 mb-10">Kitchenware</h2>
+            <div class="flex gap-2 max-sm:flex-col-reverse max-md:flex-col-reverse">
+              
+               <div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-10">
+                  <!-- card-1 -->
+                    <button>
+                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                            <figure class="p-20 pt-10 bg-slate-300">
+                              <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class=" text-yellow-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            </h2>
+                              <p class="text-black font-semibold">K. Accessories</p>
+                              
+                              <p class="text-3xl"><span>39.00</span>TK</p>
+        
+                            </div>
+                          </div>
+                    </button>
+                    <!-- caart-2 -->
+                    <button>
+                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                            <figure class="p-20 pt-10 bg-slate-300">
+                              <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class=" text-yellow-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            </h2>
+                              <p class="text-black font-semibold">K. Accessories</p>
+                              
+                              <p class="text-3xl"><span>25.00</span>TK</p>
+        
+                            </div>
+                          </div>
+                    </button>
+                    <!-- caart-3 -->
+                    <button >
+                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                            <figure class="p-20 pt-10 bg-slate-300">
+                              <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class=" text-yellow-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            </h2>
+                              <p class="text-black font-semibold">Home Cooker</p>
+                              
+                              <p class="text-3xl"><span>49.00</span>TK</p>
+        
+                            </div>
+                          </div>
+                    </button>
+                 
+                  
+                 
+               </div>
+
+                <!-- cart div -->
+                <div>
+                  <div class="bg-[#FFFFFF] shadow-lg mt-10 ml-6 border rounded-md	 w-80 h-32 p-2 ">
+                    <h4 class="text-xl mb-4 font-semibold">Have coupon?</h4>
+                    <input type="text" class="border pl-4 h-10" name="" id="" placeholder="Coupon code">
+                    <button class="btn btn-secondary btn-sm">Apply</button>
+                  </div>
+                  
+                <div class="bg-[#FFFFFF] shadow-lg mt-20 ml-6 text-2xl border p-4 ">
+                    <p class="font-bold">Total price: <span class="font-light">00</span >TK </p>
+                    <p  class="font-bold">   Discount : <span class="font-light">00</span>TK</p>
+                    <p  class="font-bold">  Total: <span class="font-light">00</span> TK</p>
+                    <button class="btn btn-secondary w-full mt-8">Make Purchase</button>
+                </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- section 1 end -->
+
+
+        <section>
+            <h2 class="text-4xl font-bold mt-20 mb-10">Sportswear</h2>
+
+            <div class="grid lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4">
+                <!-- cart-1 -->
+               <div>
+                <button>
+                    <div class="card w-96 bg-base-100 shadow-xl p-8">
+                        <figure class="p-20 pt-10 bg-slate-300">
+                          <img src="./images/prod4.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 class=" text-yellow-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        </h2>
+                          <p class="text-black font-semibold">Sports Back Cap</p>
+                          
+                          <p class="text-3xl"><span>49.00</span>TK</p>
+    
+                        </div>
+                      </div>
+                </button> 
+               </div>
+                <!-- cart-2 -->
+                <div>
+                    <button>
+                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                            <figure class="p-20 pt-10 bg-slate-300">
+                              <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class=" text-yellow-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            </h2>
+                              <p class="text-black font-semibold">Full Jersey Set</p>
+                              
+                              <p class="text-3xl"><span>69.00</span>TK</p>
+        
+                            </div>
+                          </div>
+                    </button>
+                </div>
+               
+                                <!-- cart-3 -->
+                <div>
+                    <button>
+                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                            <figure class="p-20 pt-10 bg-slate-300">
+                              <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class=" text-yellow-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            </h2>
+                              <p class="text-black font-semibold">Sports cates</p>
+                              
+                              <p class="text-3xl"><span>159.00</span>TK</p>
+        
+                            </div>
+                          </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
