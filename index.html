@@ -38,12 +38,12 @@
     <main class="container mx-auto">
         <section class="mb-20 ">
             <h2 class="text-4xl font-bold mt-20 mb-10">Kitchenware</h2>
-            <div class="flex gap-2 max-sm:flex-col-reverse max-md:flex-col-reverse">
+            <div class="flex gap-2 max-sm:flex-col-reverse max-md:flex-col-reverse max-lg:flex-col-reverse">
               
-               <div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-10">
+               <div class="grid grid-cols-3 max-md:grid-cols-2  max-sm:grid-cols-1  max-lg:grid-cols-2 gap-10">
                   <!-- card-1 -->
                     <button onclick="handleButtonClick(this)">
-                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                        <div class="card w-96 max-md:w-80 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -64,7 +64,7 @@
                     </button>
                     <!-- caart-2 -->
                     <button onclick="handleButtonClick(this)">
-                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                        <div class="card w-96 bg-base-100 max-md:w-80 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -85,7 +85,7 @@
                     </button>
                     <!-- caart-3 -->
                     <button onclick="handleButtonClick(this)">
-                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                        <div class="card w-96 bg-base-100 max-md:w-80 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -114,7 +114,7 @@
                   <div class="bg-[#FFFFFF] shadow-lg mt-10 ml-6 border rounded-md	 w-80 h-32 p-2 ">
                     <h4 class="text-xl mb-4 font-semibold">Have coupon?</h4>
                     <input type="text" class="border pl-4 h-10" name=""id="discount-input" placeholder="Coupon code">
-                    <button onclick="disCountBtn(this)" class="btn btn-secondary btn-sm" 
+                    <button onclick="disCountBtn()" class="btn btn-secondary btn-sm" 
                     id="discount-btn"
                     disabled>Apply</button>
                   </div>
@@ -127,7 +127,9 @@
                     <p class="font-bold">Total price: <span class="font-light " id="total-price">00</span >TK </p>
                     <p  class="font-bold">   Discount : <span class="font-light" id="discoun-price">00</span>TK</p>
                     <p  class="font-bold">  Total: <span class="font-light" id="final-price">00</span> TK</p>
-                    <button id="make-p-btn" onclick="totalPrice()" class="btn btn-secondary w-full mt-8" disabled >Make Purchase</button>
+                    <button id="make-p-btn" onclick="my_modal_1.showModal()" class="btn btn-secondary w-full mt-8" disabled >Make Purchase</button>
+                  
+                    <!-- <button  id="make-p-btn" class="btn btn-secondary w-full mt-8"  disabled>open modal</button> -->
                 </div>
                 </div>
 
@@ -140,11 +142,11 @@
         <section>
             <h2 class="text-4xl font-bold mt-20 mb-10">Sportswear</h2>
 
-            <div class="grid lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4">
+            <div class="grid lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 max-lg:grid-cols-2">
                 <!-- cart-1 -->
                <div>
                 <button onclick="handleButtonClick(this)">
-                    <div class="card w-96 bg-base-100 shadow-xl p-8">
+                    <div class="card w-96 max-md:w-80 bg-base-100 shadow-xl p-8">
                         <figure class="p-20 pt-10 bg-slate-300">
                           <img src="./images/prod4.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -167,7 +169,7 @@
                 <!-- cart-2 -->
                 <div>
                     <button onclick="handleButtonClick(this)">
-                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                        <div class="card w-96 max-md:w-80 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -191,7 +193,7 @@
                                 <!-- cart-3 -->
                 <div>
                     <button onclick="handleButtonClick(this)">
-                        <div class="card w-96 bg-base-100 shadow-xl p-8">
+                        <div class="card w-96 max-md:w-80 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
                             </figure>
@@ -213,6 +215,22 @@
                 </div>
             </div>
         </section>
+
+        <!-- modal -->
+
+        <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal">
+  <form method="dialog" class="modal-box">
+    <img class="ml-32" src="./images/congo.png" alt="">
+    <h2 class="text-5xl text-center text-black font-semibold">Congratulations</h2>
+    <p class="py-4 text-xl text-center">Your Purchase the product</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button onclick="goHome()" class="btn btn-secondary mr-16 w-3/4">Go Home</button>
+    </div>
+  </form>
+</dialog>
     </main>
 
     <script src="./index.js"></script>

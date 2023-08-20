@@ -24,8 +24,8 @@ function handleButtonClick(target){
      const itemName = target.childNodes[1].childNodes[3].childNodes[5].innerText.split(" ")[0];
      total = parseFloat(total) + parseFloat(itemName);
      document.getElementById('total-price').innerText =total;
-     const finalTotal=document.getElementById('final-price')
-     finalTotal.innerText=total;
+    //  const finalTotal=document.getElementById('final-price')
+    //  finalTotal.innerText=total;
     //  console.log(finalTotal)
     //  console.log(total)
      const makePBtn= document.getElementById('make-p-btn');
@@ -48,14 +48,18 @@ return total
             const discountInputField = document.getElementById("discount-input");
           const discountButton = document.getElementById("discount-btn");
          const discountPrice= document.getElementById("discoun-price")
-
+ 
+         
         function disCountBtn() {
             const discountCode =discountInputField.value; 
-
+          
 
             if (total>200 & discountCode === "SELL200") {
+                discountInputField.value= "";
+               
                 discountButton.disabled = false;
-              
+               
+                
                 const displayFinal= document.getElementById("discoun-price")
                 const text= displayFinal.innerText;
                 const convtNumber= parseFloat(text);
@@ -64,11 +68,43 @@ return total
                 const numberDiscountTotal = parseFloat(discount)
                 
                 displayFinal.innerText= numberDiscountTotal
-                
+
+                // -------------
+
+                const finalTotal=document.getElementById('final-price');
+                const finalText= finalTotal.innerText;
+                // const finalNumber= parseFloat(finalText);
+                const netTotal = total - numberDiscountTotal;
+                finalTotal.innerText= netTotal
+                console.log(netTotal)
+
               
-            } else {
+            } 
+            else {
                 discountButton.disabled = true;
             }
+
         }
+
+
+        function makePurchase(){
+            console.log('click')
+        }
+
+        function goHome(){
+            const totalPrice =document.getElementById("total-price")
+            const discountPrice =document.getElementById("discoun-price")
+            const finalPrice =document.getElementById("final-price")
+            const nameDiv = document.getElementById("name-div")
+
+            totalPrice.innerText="00";
+            discountPrice.innerText="00";
+            finalPrice.innerText="00";
+            nameDiv.innerText="";
+
+        }
+
+
+
         discountInputField.addEventListener("input", disCountBtn);
         discountButton.addEventListener('click', applyDiscount)
