@@ -113,8 +113,8 @@
                 <div>
                   <div class="bg-[#FFFFFF] shadow-lg mt-10 ml-6 border rounded-md	 w-80 h-32 p-2 ">
                     <h4 class="text-xl mb-4 font-semibold">Have coupon?</h4>
-                    <input type="text" class="border pl-4 h-10" name="" id="" placeholder="Coupon code">
-                    <button onclick="disCountPrice(this)" class="btn btn-secondary btn-sm" 
+                    <input type="text" class="border pl-4 h-10" name=""id="discount-input" placeholder="Coupon code">
+                    <button onclick="disCountBtn(this)" class="btn btn-secondary btn-sm" 
                     id="discount-btn"
                     disabled>Apply</button>
                   </div>
@@ -125,8 +125,8 @@
                     </div>
                     <hr class="divider">
                     <p class="font-bold">Total price: <span class="font-light " id="total-price">00</span >TK </p>
-                    <p  class="font-bold">   Discount : <span class="font-light">00</span>TK</p>
-                    <p  class="font-bold">  Total: <span class="font-light">00</span> TK</p>
+                    <p  class="font-bold">   Discount : <span class="font-light" id="discoun-price">00</span>TK</p>
+                    <p  class="font-bold">  Total: <span class="font-light" id="final-price">00</span> TK</p>
                     <button id="make-p-btn" onclick="totalPrice()" class="btn btn-secondary w-full mt-8" disabled >Make Purchase</button>
                 </div>
                 </div>
