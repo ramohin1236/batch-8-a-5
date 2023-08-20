@@ -42,7 +42,7 @@
               
                <div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-10">
                   <!-- card-1 -->
-                    <button>
+                    <button onclick="handleButtonClick(this)">
                         <div class="card w-96 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
@@ -57,13 +57,13 @@
                             </h2>
                               <p class="text-black font-semibold">K. Accessories</p>
                               
-                              <p class="text-3xl"><span>39.00</span>TK</p>
+                              <p class="text-3xl"><span id="price">39.00</span></p>
         
                             </div>
                           </div>
                     </button>
                     <!-- caart-2 -->
-                    <button>
+                    <button onclick="handleButtonClick(this)">
                         <div class="card w-96 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
@@ -78,13 +78,13 @@
                             </h2>
                               <p class="text-black font-semibold">K. Accessories</p>
                               
-                              <p class="text-3xl"><span>25.00</span>TK</p>
+                              <p class="text-3xl"><span id="price">25.00</span></p>
         
                             </div>
                           </div>
                     </button>
                     <!-- caart-3 -->
-                    <button >
+                    <button onclick="handleButtonClick(this)">
                         <div class="card w-96 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
@@ -99,7 +99,7 @@
                             </h2>
                               <p class="text-black font-semibold">Home Cooker</p>
                               
-                              <p class="text-3xl"><span>49.00</span>TK</p>
+                              <p class="text-3xl"><span id="price" >49.00</span></p>
         
                             </div>
                           </div>
@@ -114,14 +114,20 @@
                   <div class="bg-[#FFFFFF] shadow-lg mt-10 ml-6 border rounded-md	 w-80 h-32 p-2 ">
                     <h4 class="text-xl mb-4 font-semibold">Have coupon?</h4>
                     <input type="text" class="border pl-4 h-10" name="" id="" placeholder="Coupon code">
-                    <button class="btn btn-secondary btn-sm">Apply</button>
+                    <button onclick="disCountPrice(this)" class="btn btn-secondary btn-sm" 
+                    id="discount-btn"
+                    disabled>Apply</button>
                   </div>
                   
-                <div class="bg-[#FFFFFF] shadow-lg mt-20 ml-6 text-2xl border p-4 ">
-                    <p class="font-bold">Total price: <span class="font-light">00</span >TK </p>
+                <div class="bg-[#FFFFFF] shadow-lg mt-20 ml-6 text-2xl border p-4 rounded-md">
+                    <div id="name-div">
+
+                    </div>
+                    <hr class="divider">
+                    <p class="font-bold">Total price: <span class="font-light " id="total-price">00</span >TK </p>
                     <p  class="font-bold">   Discount : <span class="font-light">00</span>TK</p>
                     <p  class="font-bold">  Total: <span class="font-light">00</span> TK</p>
-                    <button class="btn btn-secondary w-full mt-8">Make Purchase</button>
+                    <button id="make-p-btn" onclick="totalPrice()" class="btn btn-secondary w-full mt-8" disabled >Make Purchase</button>
                 </div>
                 </div>
 
@@ -137,7 +143,7 @@
             <div class="grid lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4">
                 <!-- cart-1 -->
                <div>
-                <button>
+                <button onclick="handleButtonClick(this)">
                     <div class="card w-96 bg-base-100 shadow-xl p-8">
                         <figure class="p-20 pt-10 bg-slate-300">
                           <img src="./images/prod4.png" alt="Shoes" class="rounded-xl" />
@@ -152,7 +158,7 @@
                         </h2>
                           <p class="text-black font-semibold">Sports Back Cap</p>
                           
-                          <p class="text-3xl"><span>49.00</span>TK</p>
+                          <p class="text-3xl"><span>49.00</span></p>
     
                         </div>
                       </div>
@@ -160,7 +166,7 @@
                </div>
                 <!-- cart-2 -->
                 <div>
-                    <button>
+                    <button onclick="handleButtonClick(this)">
                         <div class="card w-96 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
@@ -175,7 +181,7 @@
                             </h2>
                               <p class="text-black font-semibold">Full Jersey Set</p>
                               
-                              <p class="text-3xl"><span>69.00</span>TK</p>
+                              <p class="text-3xl"><span>69.00</span></p>
         
                             </div>
                           </div>
@@ -184,7 +190,7 @@
                
                                 <!-- cart-3 -->
                 <div>
-                    <button>
+                    <button onclick="handleButtonClick(this)">
                         <div class="card w-96 bg-base-100 shadow-xl p-8">
                             <figure class="p-20 pt-10 bg-slate-300">
                               <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
@@ -199,7 +205,7 @@
                             </h2>
                               <p class="text-black font-semibold">Sports cates</p>
                               
-                              <p class="text-3xl"><span>159.00</span>TK</p>
+                              <p class="text-3xl"><span>159.00</span></p>
         
                             </div>
                           </div>
@@ -208,5 +214,7 @@
             </div>
         </section>
     </main>
+
+    <script src="./index.js"></script>
 </body>
 </html>
