@@ -37,10 +37,10 @@
     <!-- header end -->
     <main class="container mx-auto">
         <section class="mb-20 ">
-            <h2 class="text-4xl font-bold mt-20 mb-10">Kitchenware</h2>
-            <div class="flex gap-2 max-sm:flex-col-reverse max-md:flex-col-reverse max-lg:flex-col-reverse">
+            <h2 class="text-4xl font-bold mt-20 mb-10 ">Kitchenware</h2>
+            <div class="flex gap-2 max-sm:flex-col-reverse max-md:flex-col-reverse max-lg:flex-col-reverse  ">
               
-               <div class="grid grid-cols-3 max-md:grid-cols-2  max-sm:grid-cols-1  max-lg:grid-cols-2 gap-10">
+               <div class="grid grid-cols-3 max-md:grid-cols-2  max-sm:grid-cols-1  max-lg:grid-cols-2 gap-10 border">
                   <!-- card-1 -->
                     <button onclick="handleButtonClick(this)">
                         <div class="card w-96 max-md:w-80 bg-base-100 shadow-xl p-8">
@@ -104,34 +104,31 @@
                             </div>
                           </div>
                     </button>
-                 
-                  
-                 
-               </div>
+                 </div>
 
                 <!-- cart div -->
-                <div>
-                  <div class="bg-[#FFFFFF] shadow-lg mt-10 ml-6 border rounded-md	 w-80 h-32 p-2 ">
-                    <h4 class="text-xl mb-4 font-semibold">Have coupon?</h4>
-                    <input type="text" class="border pl-4 h-10" name=""id="discount-input" placeholder="Coupon code">
-                    <button onclick="disCountBtn()" class="btn btn-secondary btn-sm" 
-                    id="discount-btn"
-                    disabled>Apply</button>
-                  </div>
-                  
-                <div class="bg-[#FFFFFF] shadow-lg mt-20 ml-6 text-2xl border p-4 rounded-md">
-                    <div id="name-div">
-
+                <div class="border">
+                    <div class="bg-[#FFFFFF] shadow-lg mt-10  border rounded-md w-80 p-2 ">
+                      <h4 class="text-xl mb-4 font-semibold">Have coupon?</h4>
+                      <input type="text" class="border pl-4 h-10" name=""id="discount-input" placeholder="Coupon code">
+                      <button onclick="disCountBtn()" class="btn btn-secondary btn-sm" 
+                      id="discount-btn"
+                      disabled>Apply</button>
                     </div>
-                    <hr class="divider">
-                    <p class="font-bold">Total price: <span class="font-light " id="total-price">00</span >TK </p>
-                    <p  class="font-bold">   Discount : <span class="font-light" id="discoun-price">00</span>TK</p>
-                    <p  class="font-bold">  Total: <span class="font-light" id="final-price">00</span> TK</p>
-                    <button id="make-p-btn" onclick="my_modal_1.showModal()" class="btn btn-secondary w-full mt-8" disabled >Make Purchase</button>
-                  
-                    <!-- <button  id="make-p-btn" class="btn btn-secondary w-full mt-8"  disabled>open modal</button> -->
-                </div>
-                </div>
+                    
+                  <div class="bg-[#FFFFFF] shadow-lg mt-20 ml-6 text-2xl border p-4 rounded-md">
+                      <div id="name-div">
+  
+                      </div>
+                      <hr class="divider">
+                      <p class="font-bold">Total price: <span class="font-light " id="total-price">00</span >TK </p>
+                      <p  class="font-bold">   Discount : <span class="font-light" id="discoun-price">00</span>TK</p>
+                      <p  class="font-bold">  Total: <span class="font-light" id="final-price">00</span> TK</p>
+                      <button id="make-p-btn" onclick="my_modal_1.showModal()" class="btn btn-secondary w-full mt-8" disabled >Make Purchase</button>
+                    
+                      <!-- <button  id="make-p-btn" class="btn btn-secondary w-full mt-8"  disabled>open modal</button> -->
+                  </div>
+                  </div>
 
 
             </div>
@@ -139,7 +136,7 @@
         <!-- section 1 end -->
 
 
-        <section>
+        <section class="container mx-auto">
             <h2 class="text-4xl font-bold mt-20 mb-10">Sportswear</h2>
 
             <div class="grid lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 max-lg:grid-cols-2">

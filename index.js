@@ -55,10 +55,11 @@ return total
           
 
             if (total>200 & discountCode === "SELL200") {
-                discountInputField.value= "";
-               
                 discountButton.disabled = false;
-               
+              
+                discountInputField.value= "";
+                
+                
                 
                 const displayFinal= document.getElementById("discoun-price")
                 const text= displayFinal.innerText;
@@ -68,20 +69,21 @@ return total
                 const numberDiscountTotal = parseFloat(discount)
                 
                 displayFinal.innerText= numberDiscountTotal
-
                 // -------------
-
+                
                 const finalTotal=document.getElementById('final-price');
                 const finalText= finalTotal.innerText;
                 // const finalNumber= parseFloat(finalText);
                 const netTotal = total - numberDiscountTotal;
                 finalTotal.innerText= netTotal
-                console.log(netTotal)
+                // console.log(netTotal)
 
               
             } 
             else {
                 discountButton.disabled = true;
+            
+
             }
 
         }
@@ -96,12 +98,15 @@ return total
             const discountPrice =document.getElementById("discoun-price")
             const finalPrice =document.getElementById("final-price")
             const nameDiv = document.getElementById("name-div")
+            const makePBtn = document.getElementById("make-p-btn")
 
             totalPrice.innerText="00";
             discountPrice.innerText="00";
             finalPrice.innerText="00";
             nameDiv.innerText="";
 
+           makePBtn.disabled = true;
+ 
         }
 
 
